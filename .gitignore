@@ -1,0 +1,32 @@
+# 🐍 Python
+__pycache__/          # Caché de bytecode de Python
+*.pyc                 # Archivos de bytecode compilado
+*.pyo                 # Bytecode optimizado
+*.pyd                 # Bytecode para Windows
+.venv/                # Entorno virtual de Python
+venv/                 # (nombre alternativo)
+env/                  # (nombre alternativo)
+*.egg-info/           # Metadatos de paquetes instalados
+.pytest_cache/        # Caché de pytest
+.mypy_cache/          # Caché de mypy
+.ruff_cache/          # Caché de ruff
+
+# 🐘 PostgreSQL / Docker
+postgres_data/        # Datos locales de PostgreSQL (si se usa bind mount)
+*.sqlite3             # Bases de datos SQLite (por si acaso)
+*.db                  # Bases de datos genéricas
+
+# 🔐 Secretos y configuración local
+.env                  # Variables de entorno con secretos
+.env.local
+*.pem                 # Certificados y claves privadas
+*.key
+
+# 💻 Sistema operativo / Editor
+.DS_Store             # macOS
+Thumbs.db             # Windows
+.vscode/              # Configuración de VS Code (opcional)
+.idea/                # Configuración de PyCharm (opcional)
+
+# 📦 Node (si en el futuro añades frontend)
+node_modules/

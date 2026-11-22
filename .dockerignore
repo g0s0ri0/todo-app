@@ -1,0 +1,67 @@
+# ============================================================
+# .dockerignore — Excluye del build context de Docker
+# ============================================================
+
+# 🐍 Python — cachés y entornos virtuales
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 🐘 Datos locales de bases de datos
+postgres_data/
+*.sqlite3
+*.db
+
+# 🔐 Secretos y configuración local
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+
+# 📦 Git — historial y metadatos del repositorio
+.git/
+.gitignore
+.gitattributes
+
+# 🐳 Docker — archivos que no necesitan estar dentro de la imagen
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# ⚙️ CI/CD — workflows de GitHub Actions (no se usan en runtime)
+.github/
+
+# ☸️ Despliegue — manifiestos de Kubernetes y Argo CD
+deploy/
+argocd/
+
+# 📚 Documentación y metadatos del proyecto
+*.md
+docs/
+LICENSE
+CHANGELOG*
+
+# 💻 Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 📦 Node (si en el futuro añades un frontend)
+node_modules/
+npm-debug.log*
+yarn-error.log*
