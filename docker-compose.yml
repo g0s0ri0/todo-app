@@ -1,12 +1,11 @@
-version: '3.8'
-
 services:
   web:
     build: .
+    command: sh -c "sleep 5 && python run.py"  # Espera 5 segundos forzadamente
     ports:
       - "5000:5000"
     environment:
-      - DATABASE_URL=postgresql://user:password@db:5432/tododb
+      - DATABASE_URL=postgresql+psycopg2://user:password@db:5432/tododb
     depends_on:
       - db
 
@@ -22,4 +21,4 @@ services:
       - "5432:5432"
 
 volumes:
-  postgres_data
+  postgres_data:
